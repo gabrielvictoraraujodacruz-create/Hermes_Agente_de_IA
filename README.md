@@ -23,7 +23,13 @@ Pra instalar e configurar, siga o README oficial. Dicas de quem já apanhou um p
 
 ## 🤖 E o Claude Code?
 
-O [Claude Code](https://claude.com/claude-code) é o agente de programação da Anthropic que roda no terminal. Eu uso ele como **par de programação**: eu decido o que fazer, reviso e testo, e ele acelera a escrita.
+O [Claude Code](https://claude.com/claude-code) é o agente de programação da Anthropic que roda no terminal. Tenho bastante experiência com o harness dele e monto o ambiente do meu jeito:
+
+- **Hooks** que rodam antes das ferramentas (ex.: um filtro que corta a saída dos comandos e economiza tokens)
+- **Skills** próprias pra tarefas que se repetem
+- **Subagentes** especializados, cada um com seu papel e suas ferramentas
+- **Servidores MCP** pra ligar o agente a navegador, Drive e outros serviços
+- **Memória persistente** com um índice de busca, pra ele lembrar do contexto entre as sessões
 
 Os dois conversam: quando a tarefa é pesada (ler um PDF grande, escrever código), o Hermes passa pro Claude Code pelo terminal e só me entrega o resultado.
 
